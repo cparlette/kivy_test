@@ -1,19 +1,16 @@
 #:kivy 1.5.1
 
 <BitflGame>:    
-    canvas:
-        Rectangle:
-            pos: self.center_x - 5, 0
-            size: 10, self.height
-            
-    Label:
-        font_size: 70  
-        center_x: root.width / 4
-        top: root.top - 50
-        text: "0"
-        
-    Label:
-        font_size: 70  
-        center_x: root.width * 3 / 4
-        top: root.top - 50
-        text: "0"
+    label_wid: my_custom_label
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+
+        Button:
+            text: 'My controller info is : ' + root.info
+            on_press: root.do_action()
+
+        Label:
+            id: my_custom_label
+            text: 'My label before button press'

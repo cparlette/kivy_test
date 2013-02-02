@@ -1,0 +1,24 @@
+#:kivy 1.0
+
+<Selector>:
+    Image:
+        pos_hint: {'top': 1}
+        size_hint_y: None
+        source: 'Jones_in_the_Fast_Lane.png'
+		size: (800, 475)
+		allow_stretch: True
+    BoxLayout:
+        size_hint_y: None
+        height: 100
+        Label:
+            halign: 'center'
+            text: 'Time left this turn: 10'
+        Label:
+            halign: 'center'
+            text: 'Current job:\nJerk'
+        Label:
+            halign: 'center'
+            text: 'Current Education:\nBasic stuff'
+        Button:
+            halign: 'center'
+            text: 'End Turn'
